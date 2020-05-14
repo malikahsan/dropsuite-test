@@ -1,6 +1,9 @@
 if ARGV.length < 1
   puts "Please provide a folder path"
   exit
+elsif ARGV.length > 1
+  puts "No more than one the folder path"
+  exit
 end
 
 class ReadContent
@@ -9,7 +12,13 @@ class ReadContent
   end
 
   def count_same_content
-    files = Dir["#{@path}/**/*"]
+    @path = @path.to_s.chars.last == '/' ? "#{@path}**/*" : "#{@path}/**/*"
+    files = Dir["#{@path}"]
+    if files.empty?
+      puts "The forlder is empty"
+      exit
+    end
+
     arr, arr_2d = [], []
     files.each do |file_name|
       if !File.directory? file_name
