@@ -6,12 +6,15 @@ elsif ARGV.length > 1
   exit
 end
 
+require_relative 'loader'
+
 class ReadContent
   def initialize(path: "")
     @path = path
   end
 
   def count_same_content
+    horizontal_loading(20)
     @path = @path.to_s.chars.last == '/' ? "#{@path}**/*" : "#{@path}/**/*"
     files = Dir["#{@path}"]
     if files.empty?
