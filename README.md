@@ -1,6 +1,6 @@
 This code script works to scan content that has the same value in different files recursively. 
 
-## Requirements
+## Requirement
 - Ruby installed
 
 ## Setup
