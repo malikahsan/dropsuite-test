@@ -10,7 +10,7 @@ This code script works to scan content that has the same value in different file
   - example: 
     - ```ruby main.rb "/Users/ahsan/Documents/ahsan data/DropsuiteTest"```
     - ```ruby main.rb '/Users/ahsan/Downloads/DropsuiteTest'```
-    - ```ruby main.rb /Users/ahsan/Downloads/DropsuiteTest```
+    - ```ruby main.rb /Users/ahsan/Desktop/DropsuiteTest```
 - See the result
 
 Thanks
